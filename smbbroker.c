@@ -350,6 +350,7 @@ int main(int argc, char **argv)
                 // Allokieren von subscribers liste mit max-subscribers
                 subscribers = (struct subscriber *)malloc(options.max_subscribers * sizeof(struct subscriber));
                 memset((void *)subscribers, 0, options.max_subscribers * sizeof(struct subscriber));
+                should_clear_subscribers = 0;
             }
             if (subscribers_length >= options.max_subscribers)
             { // sicherstellen, dass das max subscribers limit eingehalten wird
